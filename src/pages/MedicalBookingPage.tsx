@@ -118,8 +118,8 @@ export const MedicalBookingPage: React.FC<MedicalBookingPageProps> = ({ onBack }
           <div className="space-y-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                <div className="bg-blue-100 px-4 py-2 rounded-full">
-                  <span className="text-blue-700 font-medium">
+                <div className="bg-healux-light px-4 py-2 rounded-full">
+                  <span className="text-healux-primary font-medium">
                     {selectedSpecialty?.name}
                   </span>
                 </div>

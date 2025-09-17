@@ -12,7 +12,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 const translations = {
   en: {
-    welcome: 'Welcome to Jordan Medical Tourism',
+    welcome: 'Welcome to HealuX - Where Care Meets Culture',
     signIn: 'Sign In',
     signUp: 'Sign Up',
     email: 'Email',
@@ -68,7 +68,7 @@ const translations = {
     qualityCare: 'World-class healthcare with warm hospitality',
   },
   ar: {
-    welcome: 'مرحباً بكم في السياحة العلاجية في الأردن',
+    welcome: 'مرحباً بكم في هيلكس - حيث تلتقي الرعاية بالثقافة',
     signIn: 'تسجيل الدخول',
     signUp: 'إنشاء حساب',
     email: 'البريد الإلكتروني',
@@ -124,7 +124,7 @@ const translations = {
     qualityCare: 'رعاية صحية عالمية المستوى مع ضيافة دافئة',
   },
   fr: {
-    welcome: 'Bienvenue au Tourisme Médical en Jordanie',
+    welcome: 'Bienvenue chez HealuX - Où les Soins Rencontrent la Culture',
     signIn: 'Se connecter',
     signUp: 'S\'inscrire',
     email: 'Email',
@@ -180,7 +180,7 @@ const translations = {
     qualityCare: 'Des soins de classe mondiale avec une hospitalité chaleureuse',
   },
   tr: {
-    welcome: 'Ürdün Medikal Turizmine Hoş Geldiniz',
+    welcome: 'HealuX\'e Hoş Geldiniz - Bakım ve Kültürün Buluştuğu Yer',
     signIn: 'Giriş Yap',
     signUp: 'Kayıt Ol',
     email: 'E-posta',

@@ -77,7 +77,7 @@ export const HospitalProfile: React.FC<HospitalProfileProps> = ({
                 onClick={() => setSelectedTab(tab.id as any)}
                 className={`py-4 text-sm font-medium border-b-2 transition-colors ${
                   selectedTab === tab.id
-                    ? 'border-blue-500 text-blue-600'
+                    ? 'border-healux-primary text-healux-primary'
                     : 'border-transparent text-gray-500 hover:text-gray-700'
                 }`}
               >
@@ -106,9 +106,9 @@ export const HospitalProfile: React.FC<HospitalProfileProps> = ({
                   {hospital.specialties.map((specialty) => (
                     <div
                       key={specialty.id}
-                      className="bg-blue-50 rounded-lg p-4 text-center"
+                      className="bg-healux-light rounded-lg p-4 text-center"
                     >
-                      <div className="text-blue-600 font-semibold">
+                      <div className="text-healux-primary font-semibold">
                         {language === 'ar' ? specialty.nameAr : specialty.name}
                       </div>
                     </div>
@@ -135,7 +135,7 @@ export const HospitalProfile: React.FC<HospitalProfileProps> = ({
             <div className="lg:col-span-1">
               <div className="bg-gray-50 rounded-2xl p-6 sticky top-8">
                 <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-blue-600 mb-1">
+                  <div className="text-3xl font-bold text-healux-primary mb-1">
                     {hospital.pricing.consultation} {hospital.pricing.currency}
                   </div>
                   <div className="text-gray-600">Consultation Fee</div>
@@ -156,7 +156,7 @@ export const HospitalProfile: React.FC<HospitalProfileProps> = ({
                   </div>
                 </div>
 
-                <button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-4 rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all font-medium">
+                <button className="w-full bg-gradient-to-r from-healux-primary to-healux-secondary text-white py-3 px-4 rounded-xl hover:from-healux-secondary hover:to-healux-accent transition-all font-medium">
                   {t('bookAppointment')}
                 </button>
               </div>
@@ -184,7 +184,7 @@ export const HospitalProfile: React.FC<HospitalProfileProps> = ({
                         <h3 className="text-lg font-semibold text-gray-900 mb-1">
                           {language === 'ar' ? doctor.nameAr : doctor.name}
                         </h3>
-                        <p className="text-blue-600 font-medium mb-2">
+                        <p className="text-healux-primary font-medium mb-2">
                           {language === 'ar' ? doctor.specialtyAr : doctor.specialty}
                         </p>
                         <div className="flex items-center space-x-4 rtl:space-x-reverse text-sm text-gray-600">
@@ -200,7 +200,7 @@ export const HospitalProfile: React.FC<HospitalProfileProps> = ({
                       </div>
                       <button
                         onClick={() => onBookAppointment(hospital.id, doctor.id)}
-                        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                        className="bg-healux-primary text-white px-4 py-2 rounded-lg hover:bg-healux-secondary transition-colors"
                       >
                         {t('bookAppointment')}
                       </button>

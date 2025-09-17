@@ -27,17 +27,17 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, showMenu = false })
             {showMenu && (
               <button
                 onClick={onMenuClick}
-                className="p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-gray-100 transition-colors md:hidden"
+                className="p-2 rounded-md text-gray-600 hover:text-healux-primary hover:bg-gray-100 transition-colors md:hidden"
               >
                 <Menu className="h-5 w-5" />
               </button>
             )}
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">
-                <span className="text-white text-sm font-bold">JM</span>
+              <div className="w-10 h-10 bg-gradient-to-r from-healux-primary to-healux-secondary rounded-lg flex items-center justify-center">
+                <span className="text-white text-lg font-bold">H</span>
               </div>
               <span className="ml-2 rtl:ml-0 rtl:mr-2 text-xl font-bold text-gray-900">
-                Jordan Medical
+                HealuX
               </span>
             </div>
           </div>
@@ -45,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, showMenu = false })
           <div className="flex items-center space-x-4 rtl:space-x-reverse">
             {/* Language Selector */}
             <div className="relative group">
-              <button className="flex items-center space-x-1 rtl:space-x-reverse px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+              <button className="flex items-center space-x-1 rtl:space-x-reverse px-3 py-2 text-gray-700 hover:text-healux-primary transition-colors">
                 <Languages className="h-4 w-4" />
                 <span className="text-sm font-medium">
                   {languages.find(lang => lang.code === language)?.name}
@@ -58,7 +58,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, showMenu = false })
                       key={lang.code}
                       onClick={() => setLanguage(lang.code)}
                       className={`block w-full text-left rtl:text-right px-4 py-2 text-sm hover:bg-gray-100 transition-colors ${
-                        language === lang.code ? 'text-blue-600 bg-blue-50' : 'text-gray-700'
+                        language === lang.code ? 'text-healux-primary bg-healux-light' : 'text-gray-700'
                       }`}
                     >
                       {lang.name}
@@ -71,7 +71,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, showMenu = false })
             {/* User Menu */}
             {user && (
               <div className="relative group">
-                <button className="flex items-center space-x-2 rtl:space-x-reverse px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+                <button className="flex items-center space-x-2 rtl:space-x-reverse px-3 py-2 text-gray-700 hover:text-healux-primary transition-colors">
                   <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center overflow-hidden">
                     {user.avatar ? (
                       <img src={user.avatar} alt={user.name} className="w-full h-full object-cover" />

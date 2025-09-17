@@ -27,7 +27,7 @@ export const HospitalCard: React.FC<HospitalCardProps> = ({ hospital, onClick })
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1">
-            <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
+            <h3 className="text-xl font-bold text-gray-900 mb-1 group-hover:text-healux-primary transition-colors">
               {language === 'ar' ? hospital.nameAr : hospital.name}
             </h3>
             <div className="flex items-center text-gray-500 text-sm mb-2">
@@ -61,7 +61,7 @@ export const HospitalCard: React.FC<HospitalCardProps> = ({ hospital, onClick })
             {hospital.specialties.slice(0, 2).map((specialty) => (
               <span
                 key={specialty.id}
-                className="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded-full"
+                className="px-2 py-1 bg-healux-light text-healux-primary text-xs rounded-full"
               >
                 {language === 'ar' ? specialty.nameAr : specialty.name}
               </span>
@@ -73,7 +73,7 @@ export const HospitalCard: React.FC<HospitalCardProps> = ({ hospital, onClick })
             )}
           </div>
           <div className="text-right rtl:text-left">
-            <div className="text-lg font-bold text-blue-600">
+            <div className="text-lg font-bold text-healux-primary">
               {hospital.pricing.consultation} {hospital.pricing.currency}
             </div>
             <div className="text-xs text-gray-500">{t('consultation')}</div>

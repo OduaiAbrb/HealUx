@@ -59,8 +59,8 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
         </button>
 
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-            <span className="text-white text-xl font-bold">JM</span>
+          <div className="w-16 h-16 bg-gradient-to-r from-healux-primary to-healux-secondary rounded-2xl mx-auto mb-4 flex items-center justify-center">
+            <span className="text-white text-xl font-bold">H</span>
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             {isSignIn ? t('signIn') : t('signUp')}
@@ -79,7 +79,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                 required
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-healux-primary focus:border-transparent transition-all"
                 placeholder={t('name')}
               />
             </div>
@@ -94,7 +94,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-healux-primary focus:border-transparent transition-all"
               placeholder={t('email')}
             />
           </div>
@@ -108,7 +108,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
               required
               value={formData.password}
               onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-healux-primary focus:border-transparent transition-all"
               placeholder={t('password')}
             />
           </div>
@@ -122,7 +122,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                 type="tel"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-healux-primary focus:border-transparent transition-all"
                 placeholder={t('phone')}
               />
             </div>
@@ -138,7 +138,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
                   key={value}
                   className={`flex items-center p-3 border-2 rounded-xl cursor-pointer transition-all ${
                     formData.role === value
-                      ? 'border-blue-500 bg-blue-50 text-blue-700'
+                      ? 'border-healux-primary bg-healux-light text-healux-primary'
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
@@ -159,7 +159,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
 
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-4 rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all font-medium"
+            className="w-full bg-gradient-to-r from-healux-primary to-healux-secondary text-white py-3 px-4 rounded-xl hover:from-healux-secondary hover:to-healux-accent transition-all font-medium"
           >
             {isSignIn ? t('signIn') : t('signUp')}
           </button>
@@ -168,7 +168,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose }) => {
         <div className="mt-6 text-center">
           <button
             onClick={() => setIsSignIn(!isSignIn)}
-            className="text-blue-600 hover:text-blue-700 font-medium"
+            className="text-healux-primary hover:text-healux-secondary font-medium"
           >
             {isSignIn
               ? "Don't have an account? Sign up"

@@ -92,7 +92,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                       onClick={() => setSelectedDate(date)}
                       className={`p-3 text-sm rounded-lg border transition-all ${
                         selectedDate === date
-                          ? 'border-blue-500 bg-blue-50 text-blue-700'
+                          ? 'border-healux-primary bg-healux-light text-healux-primary'
                           : 'border-gray-200 hover:border-gray-300'
                       }`}
                     >
@@ -113,7 +113,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                       onClick={() => setSelectedTime(time)}
                       className={`p-2 text-sm rounded-lg border transition-all ${
                         selectedTime === time
-                          ? 'border-blue-500 bg-blue-50 text-blue-700'
+                          ? 'border-healux-primary bg-healux-light text-healux-primary'
                           : 'border-gray-200 hover:border-gray-300'
                       }`}
                     >
@@ -126,7 +126,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               <button
                 onClick={handleNext}
                 disabled={!selectedDate || !selectedTime}
-                className="w-full bg-blue-600 text-white py-3 rounded-xl disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-blue-700 transition-colors"
+                className="w-full bg-healux-primary text-white py-3 rounded-xl disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-healux-secondary transition-colors"
               >
                 {t('next')}
               </button>
@@ -138,7 +138,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               <div className="bg-gray-50 rounded-xl p-4">
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-medium">Consultation Fee</span>
-                  <span className="font-bold text-blue-600">
+                  <span className="font-bold text-healux-primary">
                     {hospital.pricing.consultation} {hospital.pricing.currency}
                   </span>
                 </div>
@@ -150,10 +150,10 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               <div className="space-y-4">
                 <h3 className="font-semibold text-gray-900">Payment Method</h3>
                 <div className="space-y-2">
-                  <label className="flex items-center p-4 border-2 border-blue-500 bg-blue-50 rounded-xl">
+                  <label className="flex items-center p-4 border-2 border-healux-primary bg-healux-light rounded-xl">
                     <input type="radio" name="payment" defaultChecked className="mr-3 rtl:mr-0 rtl:ml-3" />
-                    <CreditCard className="h-5 w-5 mr-2 rtl:mr-0 rtl:ml-2 text-blue-600" />
-                    <span className="font-medium text-blue-700">Credit Card</span>
+                    <CreditCard className="h-5 w-5 mr-2 rtl:mr-0 rtl:ml-2 text-healux-primary" />
+                    <span className="font-medium text-healux-primary">Credit Card</span>
                   </label>
                 </div>
               </div>
@@ -162,25 +162,25 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 <input
                   type="text"
                   placeholder="Card Number"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-healux-primary focus:border-transparent"
                 />
                 <div className="grid grid-cols-2 gap-4">
                   <input
                     type="text"
                     placeholder="MM/YY"
-                    className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-healux-primary focus:border-transparent"
                   />
                   <input
                     type="text"
                     placeholder="CVV"
-                    className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-healux-primary focus:border-transparent"
                   />
                 </div>
               </div>
 
               <button
                 onClick={handleNext}
-                className="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition-colors"
+                className="w-full bg-healux-primary text-white py-3 rounded-xl hover:bg-healux-secondary transition-colors"
               >
                 Pay {hospital.pricing.consultation} {hospital.pricing.currency}
               </button>
@@ -189,8 +189,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
           {step === 'confirmation' && (
             <div className="text-center space-y-6">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                <Check className="h-8 w-8 text-green-600" />
+              <div className="w-16 h-16 bg-healux-light rounded-full flex items-center justify-center mx-auto">
+                <Check className="h-8 w-8 text-healux-primary" />
               </div>
               
               <div>
@@ -225,7 +225,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
               <button
                 onClick={onClose}
-                className="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition-colors"
+                className="w-full bg-healux-primary text-white py-3 rounded-xl hover:bg-healux-secondary transition-colors"
               >
                 Done
               </button>
